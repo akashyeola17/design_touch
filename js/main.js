@@ -190,19 +190,21 @@ function animateStats() {
 }
 
 function configureWhatsAppAction() {
-  const action = document.querySelector("[data-whatsapp-action]");
-  if (!action) return;
+  const actions = document.querySelectorAll("[data-whatsapp-action]");
+  if (!actions.length) return;
   const url = whatsappUrl();
   if (url) {
-    action.href = url;
-    action.target = "_blank";
-    action.rel = "noopener noreferrer";
-    action.removeAttribute("aria-disabled");
-    action.removeAttribute("tabindex");
-    action.removeAttribute("title");
+    actions.forEach((action) => {
+      action.href = url;
+      action.target = "_blank";
+      action.rel = "noopener noreferrer";
+      action.removeAttribute("aria-disabled");
+      action.removeAttribute("tabindex");
+      action.removeAttribute("title");
+    });
     document.querySelector("[data-whatsapp-note]")?.remove();
   } else {
-    action.addEventListener("click", (event) => event.preventDefault());
+    actions.forEach((action) => action.addEventListener("click", (event) => event.preventDefault()));
   }
 }
 

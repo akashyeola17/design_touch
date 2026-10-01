@@ -1,3 +1,5 @@
+import contact from "../data/contact.js";
+
 export function renderNavbar(items) {
   const header = document.querySelector("#site-header");
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
@@ -5,7 +7,7 @@ export function renderNavbar(items) {
   header.innerHTML = `<header class="site-header"><div class="container nav-shell">
     <a class="brand" href="${homeHref}" aria-label="Design Touch home"><span class="brand__mark" aria-hidden="true">DT</span><span class="brand__word">DESIGN TOUCH<small>MUMBAI</small></span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span class="menu-toggle__icon" aria-hidden="true"></span></button>
-    <nav class="site-nav" id="primary-navigation" aria-label="Main navigation"><ul class="site-nav__links">${items.map((item) => `<li><a class="site-nav__link" href="${item.href}"${currentPage === item.href.split("/").pop() ? ' aria-current="page"' : ""}>${item.label}</a></li>`).join("")}</ul><a class="button button--primary site-nav__cta" href="${window.location.pathname.includes("/project/") ? "../contact.html" : "contact.html"}">Get a quote <span aria-hidden="true">↗</span></a></nav>
+    <nav class="site-nav" id="primary-navigation" aria-label="Main navigation"><ul class="site-nav__links">${items.map((item) => `<li><a class="site-nav__link" href="${item.href}"${currentPage === item.href.split("/").pop() ? ' aria-current="page"' : ""}>${item.label}</a></li>`).join("")}</ul><a class="button button--primary site-nav__cta" href="https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(contact.whatsappMessage)}" target="_blank" rel="noopener noreferrer">Get a quote <span aria-hidden="true">↗</span></a></nav>
   </div></header>`;
   const siteHeader = header.querySelector(".site-header");
   const menuButton = header.querySelector(".menu-toggle");

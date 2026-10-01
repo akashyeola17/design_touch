@@ -7,7 +7,7 @@ const project = projects.find((entry) => entry.slug === slug);
 const escapeHTML = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
 
 function renderPending() {
-  main.innerHTML = `<section class="project-pending"><div class="container project-pending__inner"><p class="eyebrow">DESIGN TOUCH / PROJECT PROFILE</p><span class="project-pending__mark" aria-hidden="true">—</span><h1>Project story<br><em>in preparation.</em></h1><p>Project details and original photography will be published here once verified source material is available.</p><div class="button-row"><a class="button button--dark" href="../projects.html">Back to all work <span aria-hidden="true">↗</span></a><a class="button button--outline-dark" href="../contact.html">Get a quote <span aria-hidden="true">↗</span></a><a class="button button--outline-dark" href="#" data-whatsapp-action aria-disabled="true">WhatsApp us <span aria-hidden="true">↗</span></a></div><p class="project-pending__note">WhatsApp contact will be available once the number is confirmed.</p></div></section>`;
+  main.innerHTML = `<section class="project-pending"><div class="container project-pending__inner"><p class="eyebrow">DESIGN TOUCH / PROJECT PROFILE</p><span class="project-pending__mark" aria-hidden="true">—</span><h1>Project story<br><em>in preparation.</em></h1><p>Project details and original photography will be published here once verified source material is available.</p><div class="button-row"><a class="button button--dark" href="../projects.html">Back to all work <span aria-hidden="true">↗</span></a><a class="button button--outline-dark" data-whatsapp-action>Get a quote <span aria-hidden="true">↗</span></a><a class="button button--outline-dark" data-whatsapp-action>WhatsApp us <span aria-hidden="true">↗</span></a></div><p class="project-pending__note">WhatsApp contact will be available once the number is confirmed.</p></div></section>`;
 }
 
 function renderProject(item) {
@@ -52,15 +52,17 @@ function setupLightbox(images) {
 }
 
 function setupWhatsApp() {
-  const action = main.querySelector("[data-whatsapp-action]");
-  if (!action) return;
+  const actions = main.querySelectorAll("[data-whatsapp-action]");
+  if (!actions.length) return;
   const number = (contact.whatsapp || "").replace(/\D/g, "");
   if (number) {
-    action.href = `https://wa.me/${number}?text=${encodeURIComponent(contact.whatsappMessage)}`;
-    action.target = "_blank";
-    action.rel = "noopener noreferrer";
-    action.removeAttribute("aria-disabled");
-    action.removeAttribute("tabindex");
+    actions.forEach((action) => {
+      action.href = `https://wa.me/${number}?text=${encodeURIComponent(contact.whatsappMessage)}`;
+      action.target = "_blank";
+      action.rel = "noopener noreferrer";
+      action.removeAttribute("aria-disabled");
+      action.removeAttribute("tabindex");
+    });
     main.querySelector(".project-pending__note")?.remove();
   } else {
     action.addEventListener("click", (event) => event.preventDefault());
