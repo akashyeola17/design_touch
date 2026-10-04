@@ -1,0 +1,233 @@
+@media (max-width: 1280px) {
+  .client-marquee {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .client-marquee.is-collapsed > .client-logo:nth-child(n + 13) {
+    display: none;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-featured {
+    grid-column: span 12;
+    min-height: 420px;
+  }
+
+  .project-card,
+  .project-card--sm {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero__layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero__controls {
+    max-width: 320px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat-item:nth-child(3) {
+    border-left: 1px solid var(--color-line);
+  }
+
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .client-marquee {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .client-marquee.is-collapsed > .client-logo:nth-child(n + 9) {
+    display: none;
+  }
+
+  .locations-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    position: fixed;
+    inset: var(--header-height) 0 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 1.5rem var(--page-gutter) 2rem;
+    color: var(--color-ink);
+    background: var(--color-cream);
+    border-top: 1px solid var(--color-line);
+    transform: translateY(-110%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.35s var(--ease-out), opacity 0.35s ease, visibility 0.35s;
+  }
+
+  .site-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .site-nav__links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .site-nav__link {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .site-nav__cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    min-height: 320px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-featured,
+  .project-card,
+  .project-card--sm {
+    grid-column: span 1;
+    min-height: 280px;
+  }
+
+  .client-marquee {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .client-marquee.is-collapsed > .client-logo:nth-child(n + 7) {
+    display: none;
+  }
+
+  .whatsapp-button__label {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: 88vh;
+    align-items: flex-end;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item,
+  .stat-item:first-child,
+  .stat-item:nth-child(3) {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    padding-right: 0;
+    padding-left: 1.25rem;
+    border-top: none;
+    border-left: 1px solid var(--color-line);
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reason-item {
+    border-right: none;
+  }
+
+  .testimonial-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: clamp(2.75rem, 14vw, 3.5rem);
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .client-marquee {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .client-marquee.is-collapsed > .client-logo:nth-child(n + 5) {
+    display: none;
+  }
+
+  .whatsapp-button {
+    right: 1rem;
+    bottom: 1.25rem;
+  }
+}
