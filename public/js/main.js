@@ -81,9 +81,9 @@ function renderFooter() {
     <div class="container footer-main">
       <div class="footer-brand">
         <a class="brand" href="/" aria-label="Design Touch home">
-          <img class="brand__logo brand__logo--footer" src="/assets/images/logo/logo.jpeg" alt="Design Touch" width="160" height="52" />
+          <img class="brand__logo brand__logo--footer" src="/assets/images/logo/tag.jpeg" alt="Indian Exhibition Industry Association" width="160" height="52" />
         </a>
-        <p>Design Touch is a creative design and execution company specializing in exhibition stall design, fabrication, interior design, event environments, branding and complete project execution.</p>
+        <p>Design Touch is a proud member of the Indian Exhibition Industry Association (IEIA), connecting us with India’s professional exhibition industry and reflecting our commitment to quality, professionalism, and industry standards.</p>
       </div>
       <div>
         <h2 class="footer-heading">Navigation</h2>

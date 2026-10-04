@@ -247,7 +247,6 @@ a {
 
 .brand__logo--footer {
   height: 52px;
-  filter: brightness(0) invert(1);
 }
 
 .brand__word {

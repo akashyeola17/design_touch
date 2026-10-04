@@ -4,6 +4,7 @@ import contact from "../data/contact.js";
 
 const list = document.querySelector("[data-service-page-list]");
 if (list) {
+  const whatsappNumber = (contact.whatsapp || "").replace(/\D/g, "");
   list.innerHTML = services.map((service, index) => {
     const image = service.image
       ? `<img src="${service.image}" alt="${service.name}" loading="lazy" />`
@@ -11,9 +12,11 @@ if (list) {
     const copy = service.pageDescription
       ? `<p class="service-feature__description">${service.pageDescription}</p>`
       : `<p class="service-feature__pending">Approved service description from the company profile PDF needed.</p>`;
+    const message = encodeURIComponent(`Hello Design Touch, I would like to discuss ${service.name}.`);
+    const whatsappHref = `https://wa.me/${whatsappNumber}?text=${message}`;
     return `<article class="service-feature reveal" id="${service.slug}">
       <div class="service-feature__media">${image}</div>
-      <div class="service-feature__copy"><p class="eyebrow">SERVICE ${String(index + 1).padStart(2, "0")}</p><h2><span>${String(index + 1).padStart(2, "0")}</span>${service.name}</h2>${copy}<a class="text-link" href="mailto:${contact.email}?subject=${encodeURIComponent(`Discuss ${service.name}`)}">Discuss this service <span aria-hidden="true">↗</span></a></div>
+      <div class="service-feature__copy"><p class="eyebrow">SERVICE ${String(index + 1).padStart(2, "0")}</p><h2><span>${String(index + 1).padStart(2, "0")}</span>${service.name}</h2>${copy}<a class="text-link" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">Discuss this service <span aria-hidden="true">↗</span></a></div>
     </article>`;
   }).join("");
 }
