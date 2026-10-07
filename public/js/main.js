@@ -338,28 +338,18 @@ function initHeroCarousel() {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const labelEl = document.querySelector("[data-hero-label]");
-  const counterEl = document.querySelector("[data-hero-counter]");
-  const progressBar = document.querySelector("[data-hero-progress]");
-  const progressFill = document.querySelector("[data-hero-progress-fill]");
   const slideEls = slidesWrap.querySelectorAll("[data-hero-slide]");
-
-  const pad = (n) => String(n).padStart(2, "0");
 
   const setSlide = (next) => {
     index = (next + slides.length) % slides.length;
     slideEls.forEach((el, i) => el.classList.toggle("is-active", i === index));
     if (labelEl) labelEl.textContent = slides[index].label;
-    if (counterEl) counterEl.textContent = `${pad(index + 1)} / ${pad(slides.length)}`;
     progress = 0;
-    if (progressFill) progressFill.style.width = "0%";
-    if (progressBar) progressBar.setAttribute("aria-valuenow", "0");
   };
 
   const tick = (now, start) => {
     if (reducedMotion) return;
     progress = Math.min((now - start) / duration, 1);
-    if (progressFill) progressFill.style.width = `${progress * 100}%`;
-    if (progressBar) progressBar.setAttribute("aria-valuenow", String(Math.round(progress * 100)));
     if (progress >= 1) {
       setSlide(index + 1);
       rafId = requestAnimationFrame((t) => tick(t, t));
