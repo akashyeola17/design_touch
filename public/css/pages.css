@@ -9,7 +9,7 @@
 .editorial-hero__shade { background: linear-gradient(90deg, rgb(16 19 17 / 92%), rgb(16 19 17 / 68%) 44%, rgb(16 19 17 / 12%)); }
 .editorial-hero__content { position: relative; z-index: 1; padding-block: 8rem 6rem; }
 .editorial-hero__content h1 { max-width: 850px; margin: 1.25rem 0 1.4rem; font-family: var(--font-heading); font-size: clamp(4rem, 9vw, 8rem); font-weight: 600; letter-spacing: -.085em; line-height: .92; }
-.editorial-hero__content h1 em, .services-overview h2 em, .about-story__copy h2 em, .capabilities-intro h2 em, .page-cta h2 em { color: #b8c6b9; font-style: normal; }
+.editorial-hero__content h1 em, .services-overview h2 em, .about-story__copy h2 em, .page-cta h2 em { color: #b8c6b9; font-style: normal; }
 .editorial-hero__content > p:not(.eyebrow) { max-width: 34rem; color: rgb(255 255 255 / 78%); font-size: clamp(1rem, 1.7vw, 1.25rem); }
 .editorial-hero__content .button { margin-top: 1rem; }
 .editorial-hero__scroll { position: absolute; z-index: 1; right: var(--page-gutter); bottom: 2rem; color: rgb(255 255 255 / 65%); font-size: .62rem; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
@@ -18,7 +18,7 @@
 .about-story__grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(3rem, 9vw, 9rem); }
 .about-story__label { display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; }
 .about-story__side-note { color: var(--color-gray); font-size: .62rem; letter-spacing: .16em; line-height: 2; }
-.about-story__copy h2, .capabilities-intro h2, .page-cta h2 { margin: 0 0 1.5rem; font-family: var(--font-heading); font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 600; letter-spacing: -.07em; line-height: 1; }
+.about-story__copy h2, .page-cta h2 { margin: 0 0 1.5rem; font-family: var(--font-heading); font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 600; letter-spacing: -.07em; line-height: 1; }
 .about-story__copy h2 em { color: var(--color-green); }
 .about-story__copy p { max-width: 45rem; color: #656963; font-size: 1rem; }
 .what-we-do { background: var(--color-off-white); }
@@ -53,16 +53,7 @@
 .team-card__details { padding: 1rem .05rem 1.5rem; border-top: 1px solid rgb(255 255 255 / 22%); }
 .team-card__details .eyebrow { margin-bottom: .55rem; color: #b8c6b9; font-size: .52rem; }
 .team-card__details h3 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.05rem, 1.55vw, 1.45rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.2; }
-.capabilities-section { color: var(--color-white); background: #252a27; }
-.capabilities-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(3rem, 8vw, 8rem); }
-.capabilities-intro h2 { margin-bottom: 1.2rem; }
-.capabilities-intro > p:not(.eyebrow) { max-width: 24rem; color: rgb(255 255 255 / 65%); font-size: .9rem; }
-.capabilities-list { margin: 0; padding: 0; border-top: 1px solid rgb(255 255 255 / 20%); list-style: none; }
-.capability-item { display: grid; grid-template-columns: 2.5rem 1fr 1.5rem; align-items: center; gap: .8rem; padding: 1.15rem 0; border-bottom: 1px solid rgb(255 255 255 / 20%); }
-.capability-item > span:first-child { color: #b8c6b9; font-size: .67rem; }
-.capability-item strong { font-family: var(--font-heading); font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 500; }
-.capability-item > span:last-child { justify-self: end; }
-.page-cta { padding-block: clamp(5rem, 9vw, 8rem); color: var(--color-white); background: var(--color-charcoal); }
+.page-cta { display: grid; height: calc(100vh - var(--header-height)); height: calc(100svh - var(--header-height)); height: calc(100dvh - var(--header-height)); min-height: calc(100vh - var(--header-height)); min-height: calc(100svh - var(--header-height)); min-height: calc(100dvh - var(--header-height)); align-items: center; padding-block: clamp(5rem, 9vw, 8rem); color: var(--color-white); background: var(--color-charcoal); }
 .page-cta__inner { text-align: center; }
 .page-cta .eyebrow { color: rgb(255 255 255 / 72%); }
 .page-cta h2 { margin-inline: auto; font-size: clamp(3.2rem, 7vw, 6rem); }
@@ -119,7 +110,7 @@
   .about-story__grid { grid-template-columns: 1fr; gap: 2rem; }
   .about-story__label { min-height: 0; gap: 1rem; }
   .about-story__side-note { font-size: .55rem; }
-  .about-story__copy h2, .capabilities-intro h2 { font-size: clamp(2.65rem, 12vw, 4rem); }
+  .about-story__copy h2 { font-size: clamp(2.65rem, 12vw, 4rem); }
   .about-story__copy p { font-size: .9rem; }
   .what-grid { grid-template-columns: 1fr; }
   .about-service { min-height: 138px; grid-template-columns: 2rem 1fr 2.2rem; gap: .5rem; padding: 1rem; }
@@ -135,8 +126,6 @@
   .service-feature__placeholder, .service-feature__placeholder img, .service-feature__media > img { min-height: 280px; height: min(78vw, 370px); }
   .service-feature__copy { padding: 0; }
   .service-feature__copy h2 { grid-template-columns: 2rem 1fr; font-size: clamp(1.9rem, 9vw, 2.7rem); }
-  .capabilities-layout { grid-template-columns: 1fr; gap: 2rem; }
-  .capability-item { grid-template-columns: 2rem 1fr 1rem; }
   .page-cta h2 { font-size: clamp(3rem, 13vw, 4.8rem); }
 }
 

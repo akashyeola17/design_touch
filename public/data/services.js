@@ -33,26 +33,6 @@ const services = [
     image: "/assets/images/services/stage_event_setup.png",
   },
   {
-    name: "3D Design & Visualization",
-    slug: "3d-visualization",
-    homeDescription:
-      "Detailed 3D concepts and visualizations that bring your ideas to life and provide a clear understanding of the final space before execution.",
-    pageDescription:
-      "We create detailed 3D visualizations that help you understand, refine, and experience your space before execution begins.",
-    image: "/assets/images/services/mall_activation.png",
-  },
-  {
-    name: "Custom Fabrication",
-    slug: "custom-fabrication",
-    homeDescription:
-      "Professional fabrication of exhibition structures, display units, furniture, signage, branding elements, and customized installations with attention to quality and finishing.",
-    pageDescription:
-      "We provide precision fabrication for exhibition structures, displays, furniture, signage, and customized installations with quality finishing.",
-    aboutTitle: "Custom Fabrication",
-    includeAbout: true,
-    image: "/assets/images/services/Stall_Fabrications.png",
-  },
-  {
     name: "Branding & Display Solutions",
     slug: "branding-displays",
     homeDescription:

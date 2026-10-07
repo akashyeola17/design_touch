@@ -7,8 +7,6 @@ import projects from "../data/projects.js";
 import clients from "../data/clients.js";
 import testimonials from "../data/testimonials.js";
 import heroMedia from "../data/hero.js";
-import processSteps from "../data/process.js";
-import advantages from "../data/advantages.js";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -21,40 +19,7 @@ const footerServices = [
   "Exhibition Stall Design & Fabrication",
   "Interior Design & Execution",
   "Event Design & Setup",
-  "Custom Fabrication",
   "Branding & Display Solutions",
-  "3D Design & Visualization",
-];
-
-const categories = [
-  {
-    name: "Exhibition",
-    title: "Creative Exhibition Stall & Brand Space",
-    href: "/services",
-    image: "/assets/images/services/Stall_Fabrications.png",
-    alt: "Design Touch exhibition stall design and brand space",
-  },
-  {
-    name: "Interior",
-    title: "Modern & Functional Interior Solutions",
-    href: "/services",
-    image: "/assets/images/services/office_branding.png",
-    alt: "Design Touch interior design and office branding",
-  },
-  {
-    name: "Brand Experiences",
-    title: "Corporate Events & Brand Experiences",
-    href: "/services",
-    image: "/assets/images/services/stage_event_setup.png",
-    alt: "Design Touch event design and brand experiences",
-  },
-  {
-    name: "Branding",
-    title: "Corporate Branding & Visual Solutions",
-    href: "/services",
-    image: "/assets/images/services/printing_signage.png",
-    alt: "Design Touch corporate branding and visual displays",
-  },
 ];
 
 function whatsappUrl() {
@@ -126,28 +91,6 @@ function renderWhatsApp() {
   </a>`;
 }
 
-function renderCategories() {
-  const target = document.querySelector("[data-categories]");
-  if (!target) return;
-  target.innerHTML = categories
-    .map(
-      (cat, i) => `<article class="category-card reveal">
-      <a class="category-card__link" href="${cat.href}">
-        <div class="category-card__media">
-          <img src="${cat.image}" alt="${cat.alt}" loading="lazy" decoding="async" />
-          <span class="category-card__overlay" aria-hidden="true"></span>
-        </div>
-        <div class="category-card__body">
-          <p class="eyebrow">${String(i + 1).padStart(2, "0")} — ${cat.name}</p>
-          <h3>${cat.title}</h3>
-        </div>
-        <span class="category-card__arrow" aria-hidden="true">→</span>
-      </a>
-    </article>`,
-    )
-    .join("");
-}
-
 function renderStats() {
   const target = document.querySelector("[data-stats]");
   if (!target) return;
@@ -199,20 +142,6 @@ function renderProjects() {
   target.innerHTML = featuredHtml + restHtml;
 }
 
-function renderApproach() {
-  const target = document.querySelector("[data-process]");
-  if (!target) return;
-  target.innerHTML = processSteps
-    .map(
-      ({ number, title, description }) => `<li class="process-step reveal">
-      <span class="process-step__number">${number}</span>
-      <h3>${title}</h3>
-      <p>${description}</p>
-    </li>`,
-    )
-    .join("");
-}
-
 function renderServicesGrid() {
   const target = document.querySelector("[data-services-grid]");
   if (!target) return;
@@ -231,26 +160,11 @@ function renderServicesGrid() {
     .join("");
 }
 
-function renderReasons() {
-  const target = document.querySelector("[data-reasons]");
-  if (!target) return;
-  target.innerHTML = advantages
-    .map(
-      (item, index) => `<article class="reason-item reveal">
-      <span class="reason-item__index">${String(index + 1).padStart(2, "0")}</span>
-      <h3>${item.title}</h3>
-      <p>${item.description || ""}</p>
-    </article>`,
-    )
-    .join("");
-}
-
 function renderClients() {
   const target = document.querySelector("[data-clients]");
   if (!target) return;
   if (!clients.length) {
     target.innerHTML = `<p class="reveal">Approved client logos will be displayed here.</p>`;
-    document.querySelector("[data-clients-toggle]")?.setAttribute("hidden", "");
     return;
   }
   target.innerHTML = clients
@@ -261,17 +175,6 @@ function renderClients() {
     )
     .join("");
 
-  const toggle = document.querySelector("[data-clients-toggle]");
-  if (!toggle) return;
-  toggle.addEventListener("click", () => {
-    const expanded = toggle.getAttribute("aria-expanded") !== "true";
-    target.classList.toggle("is-collapsed", !expanded);
-    toggle.setAttribute("aria-expanded", String(expanded));
-    const label = toggle.querySelector("[data-clients-toggle-label]");
-    const icon = toggle.querySelector("[data-clients-toggle-icon]");
-    if (label) label.textContent = expanded ? "Show fewer clients" : "View all clients";
-    if (icon) icon.textContent = expanded ? "↑" : "↓";
-  });
 }
 
 function renderTestimonials() {
@@ -332,25 +235,20 @@ function initHeroCarousel() {
     .join("");
 
   let index = 0;
-  let progress = 0;
   let rafId = 0;
   const duration = 7000;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const labelEl = document.querySelector("[data-hero-label]");
   const slideEls = slidesWrap.querySelectorAll("[data-hero-slide]");
 
   const setSlide = (next) => {
     index = (next + slides.length) % slides.length;
     slideEls.forEach((el, i) => el.classList.toggle("is-active", i === index));
-    if (labelEl) labelEl.textContent = slides[index].label;
-    progress = 0;
   };
 
   const tick = (now, start) => {
     if (reducedMotion) return;
-    progress = Math.min((now - start) / duration, 1);
-    if (progress >= 1) {
+    if (now - start >= duration) {
       setSlide(index + 1);
       rafId = requestAnimationFrame((t) => tick(t, t));
       return;
@@ -431,11 +329,8 @@ document.querySelectorAll("[data-current-year]").forEach((el) => {
 });
 
 renderStats();
-renderCategories();
 renderProjects();
-renderApproach();
 renderServicesGrid();
-renderReasons();
 renderClients();
 renderTestimonials();
 initHeroCarousel();

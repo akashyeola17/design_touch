@@ -16,7 +16,7 @@ const heroSlides = [
   },
   {
     src: "/assets/images/hero/hero4.jpeg",
-    alt: "Design Touch custom fabrication and brand display solutions",
+    alt: "Design Touch brand display solutions",
     label: "Brand experiences",
   },
 ];

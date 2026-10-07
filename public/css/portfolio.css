@@ -138,6 +138,6 @@
 .portfolio-cta .page-cta__inner { max-width: 52rem; margin-inline: auto; text-align: center; }
 .portfolio-cta .eyebrow { margin-bottom: 1.25rem; color: rgb(255 255 255 / 68%); }
 .portfolio-cta h2 { margin: 0 auto 2rem; font-family: var(--font-display); font-size: clamp(3.3rem, 7vw, 6rem); font-weight: 600; letter-spacing: -.075em; line-height: .95; }
-.portfolio-cta h2 em { color: #b8c6b9; font-style: normal; }
+.portfolio-cta h2 em { color: #dbe3d9; font-style: normal; }
 @media (max-width: 900px) { .portfolio-intro__grid { grid-template-columns: .4fr 1.2fr .9fr; gap: 1.25rem; }.portfolio-intro h2 { font-size: clamp(2.5rem, 5vw, 4rem); } }
 @media (max-width: 600px) { .portfolio-intro__grid { grid-template-columns: 1fr; gap: 1rem; }.portfolio-intro h2 { font-size: clamp(3rem, 13vw, 4.5rem); }.portfolio-cta h2 { font-size: clamp(3rem, 12vw, 4.5rem); } }
