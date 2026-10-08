@@ -1,6 +1,6 @@
 @media (max-width: 1280px) {
   .client-marquee {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
   .services-grid {
@@ -41,7 +41,16 @@
   }
 
   .client-marquee {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .client-logo {
+    min-height: clamp(54px, 7vh, 68px);
+  }
+
+  .client-logo img {
+    max-height: 44px;
   }
 
   .locations-inner {
@@ -130,7 +139,17 @@
   }
 
   .client-marquee {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+
+  .client-logo {
+    min-height: clamp(44px, 5.6vh, 54px);
+    padding: 0.35rem;
+  }
+
+  .client-logo img {
+    max-height: 36px;
   }
 
   .whatsapp-button__label {
@@ -203,7 +222,16 @@
   }
 
   .client-marquee {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .client-logo {
+    min-height: clamp(42px, 6vh, 50px);
+    padding: 0.3rem;
+  }
+
+  .client-logo img {
+    max-height: 32px;
   }
 
   .whatsapp-button {

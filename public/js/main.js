@@ -38,6 +38,7 @@ function renderFooter() {
   const social = [
     contact.facebook ? `<a href="${contact.facebook}" target="_blank" rel="noopener noreferrer">Facebook</a>` : "",
     contact.instagram ? `<a href="${contact.instagram}" target="_blank" rel="noopener noreferrer">Instagram</a>` : "",
+    contact.linkedin ? `<a href="${contact.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn</a>` : "",
   ]
     .filter(Boolean)
     .join(" · ");
@@ -153,7 +154,6 @@ function renderServicesGrid() {
       </div>
       <div class="service-card__body">
         <h3>${service.name}</h3>
-        <p>${service.homeDescription}</p>
       </div>
     </a>`,
     )

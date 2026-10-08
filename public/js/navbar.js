@@ -1,4 +1,4 @@
-const LOGO_SRC = "/assets/images/logo/logo.jpeg";
+const LOGO_SRC = "/assets/images/logo/modern-designntouch.png";
 
 function navHref(path) {
   return path;
