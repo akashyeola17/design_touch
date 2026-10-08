@@ -1,10 +1,6 @@
 @media (max-width: 1280px) {
   .client-marquee {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .client-marquee.is-collapsed > .client-logo:nth-child(n + 13) {
-    display: none;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
   .services-grid {
@@ -28,14 +24,6 @@
     gap: 2rem;
   }
 
-  .hero__controls {
-    max-width: 320px;
-  }
-
-  .intro-grid {
-    grid-template-columns: 1fr;
-  }
-
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -48,29 +36,34 @@
     border-left: 1px solid var(--color-line);
   }
 
-  .process-timeline {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .footer-main {
     grid-template-columns: 1fr 1fr;
   }
 
   .client-marquee {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 0.55rem;
   }
 
-  .client-marquee.is-collapsed > .client-logo:nth-child(n + 9) {
-    display: none;
+  .client-logo {
+    min-height: clamp(54px, 7vh, 68px);
+  }
+
+  .client-logo img {
+    max-height: 44px;
   }
 
   .locations-inner {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 800px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
 }
 
 @media (max-width: 900px) {
@@ -115,25 +108,27 @@
     border-bottom: 1px solid var(--color-line);
   }
 
-  .site-nav__cta {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .category-card {
-    min-height: 320px;
-  }
-
   .services-grid {
     grid-template-columns: 1fr;
   }
 
   .portfolio-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-projects .portfolio-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: clamp(160px, 25vw, 230px);
+  }
+
+  .section-projects .project-featured {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .section-projects .project-card--sm,
+  .section-projects .project-card--sm:nth-child(n + 4) {
+    grid-column: span 2;
   }
 
   .project-featured,
@@ -144,11 +139,17 @@
   }
 
   .client-marquee {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.45rem;
   }
 
-  .client-marquee.is-collapsed > .client-logo:nth-child(n + 7) {
-    display: none;
+  .client-logo {
+    min-height: clamp(44px, 5.6vh, 54px);
+    padding: 0.35rem;
+  }
+
+  .client-logo img {
+    max-height: 36px;
   }
 
   .whatsapp-button__label {
@@ -156,40 +157,46 @@
   }
 }
 
+@media (max-width: 600px) {
+  .section-projects .portfolio-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .section-projects .project-featured,
+  .section-projects .project-card--sm,
+  .section-projects .project-card--sm:nth-child(n + 4) {
+    grid-column: 1;
+    grid-row: auto;
+    min-height: 260px;
+    aspect-ratio: 4 / 3;
+  }
+}
+
 @media (max-width: 768px) {
   .home-hero {
-    min-height: 88vh;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
     align-items: flex-end;
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .stat-item,
   .stat-item:first-child,
   .stat-item:nth-child(3) {
     border-left: none;
-    border-right: none;
+    border-right: 1px solid var(--color-line);
     border-bottom: 1px solid var(--color-line);
   }
 
-  .process-timeline {
-    grid-template-columns: 1fr;
-  }
-
-  .process-step {
-    padding-right: 0;
-    padding-left: 1.25rem;
-    border-top: none;
-    border-left: 1px solid var(--color-line);
-  }
-
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .reason-item {
+  .stat-item:nth-child(even) {
     border-right: none;
   }
 
@@ -205,10 +212,6 @@
 }
 
 @media (max-width: 480px) {
-  .hero__title {
-    font-size: clamp(2.75rem, 14vw, 3.5rem);
-  }
-
   .button-row {
     flex-direction: column;
     align-items: stretch;
@@ -219,15 +222,21 @@
   }
 
   .client-marquee {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .client-marquee.is-collapsed > .client-logo:nth-child(n + 5) {
-    display: none;
+  .client-logo {
+    min-height: clamp(42px, 6vh, 50px);
+    padding: 0.3rem;
+  }
+
+  .client-logo img {
+    max-height: 32px;
   }
 
   .whatsapp-button {
     right: 1rem;
     bottom: 1.25rem;
   }
+
 }

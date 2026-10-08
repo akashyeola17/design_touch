@@ -21,6 +21,34 @@
   transition-delay: 0.24s;
 }
 
+/* Let the client wall arrive in a soft stagger as it enters the viewport. */
+.client-logo.reveal {
+  opacity: 0;
+  transform: translateY(20px) scale(0.96);
+  transition:
+    opacity 0.55s var(--ease-out, ease),
+    transform 0.55s var(--ease-out, ease),
+    box-shadow 0.25s ease;
+}
+
+.client-logo.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.client-logo.reveal:nth-child(5n + 2) { transition-delay: 0.06s; }
+.client-logo.reveal:nth-child(5n + 3) { transition-delay: 0.12s; }
+.client-logo.reveal:nth-child(5n + 4) { transition-delay: 0.18s; }
+.client-logo.reveal:nth-child(5n) { transition-delay: 0.24s; }
+
+.client-logo img {
+  transition: transform 0.35s var(--ease-out, ease);
+}
+
+.client-logo:hover img {
+  transform: scale(1.07);
+}
+
 @keyframes scroll-pulse {
   0%,
   100% {
@@ -47,6 +75,17 @@
   .reveal {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  .client-logo.reveal,
+  .client-logo.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .client-logo img {
     transition: none;
   }
 }

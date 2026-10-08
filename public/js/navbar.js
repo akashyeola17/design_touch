@@ -1,16 +1,7 @@
-import contact from "../data/contact.js";
-
-const LOGO_SRC = "/assets/images/logo/logo.jpeg";
+const LOGO_SRC = "/assets/images/logo/modern-designntouch.png";
 
 function navHref(path) {
   return path;
-}
-
-function whatsappHref() {
-  if (!contact.whatsapp) return `mailto:${contact.email}`;
-  const number = contact.whatsapp.replace(/\D/g, "");
-  const message = encodeURIComponent(contact.whatsappMessage || "");
-  return number ? `https://wa.me/${number}?text=${message}` : `mailto:${contact.email}`;
 }
 
 export function renderNavbar(items) {
@@ -41,7 +32,6 @@ export function renderNavbar(items) {
             )
             .join("")}
         </ul>
-        <a class="button button--primary site-nav__cta" href="${whatsappHref()}" target="_blank" rel="noopener noreferrer">Let's Talk</a>
       </nav>
     </div>
   </header>`;
@@ -49,12 +39,19 @@ export function renderNavbar(items) {
   const siteHeader = header.querySelector(".site-header");
   const menuButton = header.querySelector(".menu-toggle");
   const navigation = header.querySelector(".site-nav");
+  const syncHomeSnapOffset = () => {
+    if (!document.documentElement.classList.contains("home-page")) return;
+    const offset = siteHeader.classList.contains("is-hidden") ? "0px" : "var(--header-height)";
+    document.documentElement.style.setProperty("--home-snap-offset", offset);
+  };
 
   const setMenu = (open) => {
     menuButton.setAttribute("aria-expanded", String(open));
     menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
     navigation.classList.toggle("is-open", open);
     siteHeader.classList.toggle("menu-is-open", open);
+    if (open) siteHeader.classList.remove("is-hidden");
+    syncHomeSnapOffset();
     document.body.classList.toggle("menu-open", open);
   };
 
@@ -72,7 +69,36 @@ export function renderNavbar(items) {
     if (window.innerWidth > 900) setMenu(false);
   });
 
-  const updateHeader = () => siteHeader.classList.toggle("is-scrolled", window.scrollY > 32);
+  let lastScrollY = window.scrollY;
+  let directionDistance = 0;
+  const updateHeader = () => {
+    const currentScrollY = window.scrollY;
+    const scrollDelta = currentScrollY - lastScrollY;
+    siteHeader.classList.toggle("is-scrolled", currentScrollY > 32);
+    if (menuButton.getAttribute("aria-expanded") === "true" || currentScrollY <= 32) {
+      siteHeader.classList.remove("is-hidden");
+      directionDistance = 0;
+    } else if (scrollDelta !== 0) {
+      directionDistance = Math.sign(directionDistance) === Math.sign(scrollDelta)
+        ? directionDistance + scrollDelta
+        : scrollDelta;
+
+      if (directionDistance > 3) {
+        siteHeader.classList.add("is-hidden");
+        directionDistance = 0;
+      } else if (directionDistance < -3) {
+        siteHeader.classList.remove("is-hidden");
+        directionDistance = 0;
+      }
+    }
+
+    lastScrollY = currentScrollY;
+    syncHomeSnapOffset();
+  };
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
+  siteHeader.addEventListener("focusin", () => {
+    siteHeader.classList.remove("is-hidden");
+    syncHomeSnapOffset();
+  });
 }
