@@ -15,12 +15,10 @@ const navItems = [
   { label: "About", href: "/about" },
 ];
 
-const footerServices = [
-  "Exhibition Stall Design & Fabrication",
-  "Interior Design & Execution",
-  "Event Design & Setup",
-  "Branding & Display Solutions",
-];
+const footerServices = services.map((service) => ({
+  name: service.name,
+  href: `/services#${service.slug}`,
+}));
 
 function whatsappUrl() {
   if (!contact.whatsapp) return "";
@@ -33,7 +31,9 @@ function renderFooter() {
   const phoneLinks = (contact.phone || [])
     .map((number) => `<li><a href="tel:${number.replace(/\s/g, "")}">${number}</a></li>`)
     .join("");
-  const serviceLinks = footerServices.map((name) => `<li><a href="/services">${name}</a></li>`).join("");
+  const serviceLinks = footerServices
+    .map((service) => `<li><a href="${service.href}">${service.name}</a></li>`)
+    .join("");
   const navLinks = navItems.map((item) => `<li><a href="${item.href}">${item.label}</a></li>`).join("");
   const social = [
     contact.facebook ? `<a href="${contact.facebook}" target="_blank" rel="noopener noreferrer">Facebook</a>` : "",
@@ -148,9 +148,9 @@ function renderServicesGrid() {
   if (!target) return;
   target.innerHTML = services
     .map(
-      (service) => `<a class="service-card reveal" href="/services">
+      (service) => `<a class="service-card reveal" href="/services#${service.slug}">
       <div class="service-card__image">
-        <img src="${service.image}" alt="${service.name} — Design Touch" loading="lazy" decoding="async" />
+        <img src="${service.image}" alt="${service.imageAlt || `${service.name} — Design Touch`}" loading="lazy" decoding="async" />
       </div>
       <div class="service-card__body">
         <h3>${service.name}</h3>
@@ -170,7 +170,7 @@ function renderClients() {
   target.innerHTML = clients
     .map(
       (client) => `<div class="client-logo reveal">
-      <img src="${client.logo}" alt="${client.name} — Design Touch client" loading="lazy" decoding="async" />
+      <img src="${client.logo}" alt="${client.name} logo" loading="lazy" decoding="async" />
     </div>`,
     )
     .join("");

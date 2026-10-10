@@ -1,5 +1,5 @@
 import { initRevealAnimations } from "./animations.js";
-import stats from "../../data/stats.js";
+import stats from "../data/stats.js";
 
 const teamMembers = [
   { image: "1 .Proprietor.png", name: "Govindkumar Goud", role: "Founder & Proprietor" },

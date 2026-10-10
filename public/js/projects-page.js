@@ -1,4 +1,4 @@
-import projects from "../../data/portfolio-projects.js";
+import projects from "../data/portfolio-projects.js";
 
 const grid = document.querySelector("[data-portfolio-grid]");
 const count = document.querySelector("[data-project-count]");
@@ -17,7 +17,8 @@ function render() {
   grid.innerHTML = shown.map((project, index) => {
     const images = project.images?.length ? project.images : [project.image].filter(Boolean);
     const imageList = escapeHTML(JSON.stringify(images));
-    const image = images.length ? `<img src="${escapeHTML(images[0])}" alt="${escapeHTML(project.alt || `${project.client} project`)}" data-project-image loading="lazy" decoding="async" width="1200" height="900">` : `<div class="portfolio-card__missing" role="img" aria-label="Project image not available"><span>IMAGE NOT AVAILABLE</span></div>`;
+    const alt = project.alt || [project.client, project.title, project.category === "Exhibition" ? "exhibition stall" : project.category, "by Design Touch"].filter(Boolean).join(" — ");
+    const image = images.length ? `<img src="${escapeHTML(images[0])}" alt="${escapeHTML(alt)}" data-project-image loading="lazy" decoding="async" width="1200" height="900">` : `<div class="portfolio-card__missing" role="img" aria-label="Project image not available"><span>IMAGE NOT AVAILABLE</span></div>`;
     const details = [project.title, project.location, project.category].filter(Boolean).map(escapeHTML).join(" · ");
     return `<article class="portfolio-card" tabindex="0" data-project-gallery data-images="${imageList}" aria-label="${escapeHTML(project.client || project.title || "Project")} photo gallery"><div class="portfolio-card__media">${image}<span class="portfolio-card__veil"></span><span class="portfolio-card__arrow" aria-hidden="true">↻</span><span class="portfolio-card__overline">${escapeHTML(project.category || "PROJECT")} · HOVER TO EXPLORE</span></div><div class="portfolio-card__caption"><div><h3>${escapeHTML(project.client || project.title || "Project")}</h3><p>${details}</p></div><span aria-hidden="true">${String(index + 1).padStart(2, "0")}</span></div></article>`;
   }).join("");

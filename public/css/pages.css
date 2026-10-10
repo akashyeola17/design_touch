@@ -62,14 +62,14 @@
 .team-card__details { padding: 1rem .05rem 1.5rem; border-top: 1px solid var(--color-line); }
 .team-card__details .eyebrow { margin-bottom: .55rem; color: #718371; font-size: .78rem; letter-spacing: .01em; text-transform: none; }
 .team-card__details h3 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.05rem, 1.55vw, 1.45rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.2; }
-.page-cta { display: grid; height: calc(100vh - var(--header-height)); height: calc(100svh - var(--header-height)); height: calc(100dvh - var(--header-height)); min-height: calc(100vh - var(--header-height)); min-height: calc(100svh - var(--header-height)); min-height: calc(100dvh - var(--header-height)); align-items: center; padding-block: clamp(5rem, 9vw, 8rem); color: #44352d; background: #e4e9df; }
-.page-cta__inner { text-align: center; }
+.page-cta { display: grid; min-height: calc(100vh - var(--header-height)); min-height: calc(100svh - var(--header-height)); min-height: calc(100dvh - var(--header-height)); align-items: center; padding-block: clamp(5rem, 9vw, 8rem); color: #44352d; background: #e4e9df; }
+.page-cta__inner { max-width: 56rem; margin-inline: auto; text-align: center; }
 .page-cta .eyebrow { color: var(--color-muted); }
-.page-cta h2 { margin-inline: auto; font-size: clamp(3.2rem, 7vw, 6rem); }
+.page-cta h2 { margin: 0 auto 1.25rem; font-size: clamp(3.2rem, 7vw, 6rem); line-height: .98; }
 .page-cta h2 em { color: var(--color-accent); }
 .page-cta .button { margin-top: 1rem; }
 .page-cta--services { background: #e4e9df; }
-.page-cta__inner > p:not(.eyebrow) { color: #665c52; }
+.page-cta__inner > p:not(.eyebrow) { max-width: 34rem; margin: 0 auto; color: #665c52; }
 
 .services-overview { position: relative; overflow: hidden; background: #eeede8; }
 .services-overview::before, .services-overview::after { position: absolute; top: 50%; right: -5%; width: min(48vw, 680px); aspect-ratio: 1; border: 1px solid rgb(113 131 113 / 24%); border-radius: 50%; content: ""; pointer-events: none; transform: translateY(-50%); }
@@ -96,6 +96,7 @@
 .service-feature__description, .service-feature__pending { max-width: 32rem; margin: 0 0 1.6rem; color: var(--color-gray); font-size: .9rem; line-height: 1.75; text-wrap: pretty; }
 .service-feature__pending { padding-left: .9rem; border-left: 2px solid var(--color-red); font-size: .76rem; }
 .service-feature__copy .text-link { font-size: .7rem; }
+.service-feature__related { margin: .85rem 0 0; }
 
 @media (max-width: 900px) {
   .editorial-hero { min-height: 100vh; min-height: 100svh; min-height: 100dvh; }

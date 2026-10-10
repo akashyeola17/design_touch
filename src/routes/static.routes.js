@@ -9,24 +9,40 @@ const __dirname = path.dirname(__filename);
 
 const viewsPath = path.join(__dirname, "../../views");
 
-// Home
+function sendView(res, file) {
+  res.sendFile(path.join(viewsPath, file));
+}
+
 router.get("/", (req, res) => {
-    res.sendFile(path.join(viewsPath, "homePage.html"));
+  sendView(res, "homePage.html");
 });
 
-// About
 router.get("/about", (req, res) => {
-    res.sendFile(path.join(viewsPath, "about.html"));
+  sendView(res, "about.html");
 });
 
-// Services
 router.get("/services", (req, res) => {
-    res.sendFile(path.join(viewsPath, "services.html"));
+  sendView(res, "services.html");
 });
 
-// Projects
 router.get("/projects", (req, res) => {
-    res.sendFile(path.join(viewsPath, "projects.html"));
+  sendView(res, "projects.html");
+});
+
+router.get(["/index.html", "/homePage.html", "/home.html"], (req, res) => {
+  res.redirect(301, "/");
+});
+
+router.get(["/about.html", "/about/"], (req, res) => {
+  res.redirect(301, "/about");
+});
+
+router.get(["/services.html", "/services/"], (req, res) => {
+  res.redirect(301, "/services");
+});
+
+router.get(["/projects.html", "/projects/"], (req, res) => {
+  res.redirect(301, "/projects");
 });
 
 export default router;
