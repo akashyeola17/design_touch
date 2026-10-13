@@ -64,6 +64,111 @@
     gap: 1.5rem;
   }
 
+  .home-page .section-intro > .intro-grid {
+    grid-template-areas:
+      "heading"
+      "copy"
+      "image";
+    grid-template-rows: auto auto auto;
+    row-gap: 1rem;
+  }
+
+  .home-page .intro-heading .display-heading {
+    font-size: clamp(2.35rem, 8vw, 3.4rem);
+  }
+
+  .home-page .intro-supporting-copy,
+  .home-page .intro-copy .intro-lead {
+    max-width: 100%;
+  }
+
+  .home-page .intro-actions {
+    gap: .45rem;
+  }
+
+  .home-page .section-intro {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    justify-content: flex-start;
+    gap: 0;
+    padding-block: clamp(1.5rem, 5vh, 3rem) 0;
+    overflow: visible;
+  }
+
+  .home-page .section-intro .intro-grid {
+    flex: 0 0 auto;
+    gap: clamp(1rem, 3vh, 1.5rem);
+    transform: none;
+  }
+
+  .home-page .section-intro .intro-aside {
+    width: 100%;
+    max-height: none;
+    aspect-ratio: 16 / 7;
+  }
+
+  .home-page .section-intro .stats-strip {
+    margin-top: clamp(1.25rem, 3vh, 2rem);
+  }
+
+  .home-page .section-intro .stats-grid {
+    min-height: 0;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .home-page .intro-heading .display-heading {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    line-height: .94;
+  }
+
+  .home-page .intro-copy .intro-lead {
+    margin-bottom: .75rem;
+    font-size: .9rem;
+    line-height: 1.5;
+  }
+
+  .home-page .intro-supporting-copy {
+    padding-left: .75rem;
+  }
+
+  .home-page .intro-supporting-copy p {
+    margin-bottom: .5rem;
+    font-size: .8rem;
+    line-height: 1.45;
+  }
+
+  .home-page .intro-actions {
+    gap: .45rem;
+    margin-top: .75rem;
+  }
+
+  .home-page .intro-action {
+    min-height: 2.15rem;
+    gap: .5rem;
+    padding: .4rem .6rem;
+    font-size: .66rem;
+  }
+
+  .home-page .section-intro .intro-eyebrow {
+    margin-bottom: .65rem;
+  }
+
+  .home-page .section-intro .stat-item {
+    padding: .7rem .5rem;
+  }
+
+  .home-page .section-intro .stat-value {
+    margin-bottom: .25rem;
+    font-size: 1.8rem;
+  }
+
+  .home-page .section-intro .stat-item h3 {
+    font-size: .62rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -184,6 +289,36 @@
     align-items: flex-end;
   }
 
+  .hero__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding-top: calc(var(--header-height) + 1rem);
+  }
+
+  .hero__content {
+    width: min(100%, 34rem);
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .hero__title {
+    max-width: 18ch;
+    font-size: clamp(2rem, 8vw, 2.9rem);
+    line-height: 1.08;
+  }
+
+  .home-hero[data-hero-theme] .hero__title {
+    max-width: 18ch;
+    font-size: clamp(2rem, 8vw, 2.9rem);
+  }
+
+  .hero__ieia-logo {
+    width: min(180px, 54vw);
+    max-height: 62px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgb(0 0 0 / 18%));
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -208,6 +343,42 @@
   .footer-main {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .faq-layout {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  .faq-header {
+    position: static;
+    max-width: 42rem;
+  }
+
+  .faq-heading h2 {
+    font-size: clamp(2.45rem, 8vw, 3.5rem);
+  }
+
+  .faq-intro {
+    max-width: 42rem;
+  }
+
+  .faq-list details {
+    padding-block: 0;
+  }
+
+  .faq-list summary {
+    min-height: 4.5rem;
+    gap: .8rem;
+  }
+
+  .faq-question {
+    font-size: clamp(1.2rem, 4vw, 1.45rem);
+  }
+
+  .faq-list details p {
+    margin-left: calc(2rem + .8rem);
+    margin-right: 0;
   }
 }
 
