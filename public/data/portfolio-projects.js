@@ -28,7 +28,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-03",
-    "client": "Rosari",
+    "client": "Pet Care by Rossari",
     "title": "Pet Fed Pune 2025",
     "category": "Exhibition",
     "location": "",
@@ -37,7 +37,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-03/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-03/02.jpeg"
     ],
-    "alt": "Rosari exhibition project by Design Touch"
+    "alt": "Pet Care by Rossari exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-04",
@@ -302,7 +302,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-23",
-    "client": "Envysis",
+    "client": "Envisys",
     "title": "Siat Pune",
     "category": "Exhibition",
     "location": "",
@@ -311,7 +311,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-23/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-23/02.jpeg"
     ],
-    "alt": "Envysis exhibition project by Design Touch"
+    "alt": "Envisys exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-24",
@@ -466,7 +466,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-35",
-    "client": "Rosari",
+    "client": "Pet Care by Rossari",
     "title": "Pet fed Mumbai",
     "category": "Exhibition",
     "location": "",
@@ -476,7 +476,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-35/02.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-35/03.jpeg"
     ],
-    "alt": "Rosari exhibition project by Design Touch"
+    "alt": "Pet Care by Rossari exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-36",
@@ -509,7 +509,7 @@ const projects = [
   {
     "slug": "exhibition-project-38",
     "client": "Yamaha",
-    "title": "Productonica Delhi",
+    "title": "Productronica India, Bengaluru",
     "category": "Exhibition",
     "location": "",
     "image": "/assets/images/projects/portfolio/exhibitions/project-38/01.jpeg",
@@ -741,13 +741,12 @@ const projects = [
   {
     "slug": "exhibition-project-55",
     "client": "Leaptech",
-    "title": "Productonica  Banglore",
+    "title": "Productronica India, Bengaluru",
     "category": "Exhibition",
     "location": "",
     "image": "/assets/images/projects/portfolio/exhibitions/project-55/05.jpeg",
     "images": [
-      "/assets/images/projects/portfolio/exhibitions/project-55/05.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-55/03.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-55/05.jpeg"
     ],
     "alt": "Leaptech exhibition project by Design Touch"
   },

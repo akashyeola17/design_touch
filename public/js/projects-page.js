@@ -14,6 +14,7 @@ let activeCategory = ["exhibition", "interior"].includes(requestedCategory) ? re
 let activeImages = [];
 let activeImageIndex = 0;
 let activeProjectName = "";
+let galleryScrollPosition = 0;
 
 const escapeHTML = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
 
@@ -50,6 +51,8 @@ function updateGalleryImage() {
 
 function openGallery(card) {
   if (!gallery || !card) return;
+  // Save the document position before the native dialog moves focus into itself.
+  galleryScrollPosition = window.scrollY;
   activeImages = JSON.parse(card.dataset.images || "[]");
   activeProjectName = card.dataset.projectName || "Project";
   activeImageIndex = 0;
@@ -73,6 +76,21 @@ grid.addEventListener("click", (event) => {
 });
 
 gallery?.querySelector("[data-gallery-close]")?.addEventListener("click", () => gallery.close());
+gallery?.addEventListener("close", () => {
+  const scrollPosition = galleryScrollPosition;
+  // The browser restores focus to the opener after closing a <dialog>; that can
+  // trigger scroll snapping/smooth scrolling after the close event. Restore only
+  // after that native focus work has completed, with smooth scrolling disabled.
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    const root = document.documentElement;
+    const previousScrollBehavior = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, scrollPosition);
+    requestAnimationFrame(() => {
+      root.style.scrollBehavior = previousScrollBehavior;
+    });
+  }));
+});
 galleryPrevious?.addEventListener("click", () => stepGallery(-1));
 galleryNext?.addEventListener("click", () => stepGallery(1));
 gallery?.addEventListener("click", (event) => {
