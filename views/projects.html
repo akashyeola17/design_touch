@@ -88,6 +88,15 @@
         </div>
       </section>
     </main>
+    <dialog class="lightbox project-lightbox" data-project-lightbox aria-label="Project photo gallery">
+      <button class="lightbox__close" type="button" data-gallery-close aria-label="Close gallery">×</button>
+      <button class="lightbox__previous" type="button" data-gallery-previous aria-label="Previous project image">←</button>
+      <figure>
+        <img data-gallery-image alt="" />
+        <figcaption><span data-gallery-title></span><span data-gallery-count></span></figcaption>
+      </figure>
+      <button class="lightbox__next" type="button" data-gallery-next aria-label="Next project image">→</button>
+    </dialog>
     <div id="site-footer"></div>
     <div id="whatsapp-contact"></div>
   </body>

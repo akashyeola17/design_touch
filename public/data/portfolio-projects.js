@@ -28,7 +28,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-03",
-    "client": "Rosari",
+    "client": "Pet Care by Rossari",
     "title": "Pet Fed Pune 2025",
     "category": "Exhibition",
     "location": "",
@@ -37,11 +37,11 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-03/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-03/02.jpeg"
     ],
-    "alt": "Rosari exhibition project by Design Touch"
+    "alt": "Pet Care by Rossari exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-04",
-    "client": "Avantech",
+    "client": "Advantech",
     "title": "Automation Expo South Chennai",
     "category": "Exhibition",
     "location": "",
@@ -51,11 +51,11 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-04/02.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-04/03.jpeg"
     ],
-    "alt": "Avantech exhibition project by Design Touch"
+    "alt": "Advantech exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-05",
-    "client": "Atul",
+    "client": "Polygrip",
     "title": "India mattresstech Expo Greater Noida, Delhi",
     "category": "Exhibition",
     "location": "",
@@ -64,7 +64,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-05/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-05/02.jpeg"
     ],
-    "alt": "Atul exhibition project by Design Touch"
+    "alt": "Polygrip exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-06",
@@ -95,7 +95,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-08",
-    "client": "Inventry",
+    "client": "The Inventory",
     "title": "Mumbai",
     "category": "Exhibition",
     "location": "",
@@ -104,7 +104,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-08/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-08/02.jpeg"
     ],
-    "alt": "Inventry exhibition project by Design Touch"
+    "alt": "The Inventory exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-09",
@@ -121,18 +121,17 @@ const projects = [
   },
   {
     "slug": "exhibition-project-10",
-    "client": "Visimaster",
-    "title": "Fasterner Fair Mumbai 2025",
+    "client": "Varad Automation",
+    "title": "Fastener Fair Mumbai 2025",
     "category": "Exhibition",
     "location": "",
     "image": "/assets/images/projects/portfolio/exhibitions/project-10/01.jpeg",
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-10/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-10/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-10/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-10/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-10/03.jpeg"
     ],
-    "alt": "Visimaster exhibition project by Design Touch"
+    "alt": "Varad Automation exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-11",
@@ -150,7 +149,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-12",
-    "client": "Ad Equipments",
+    "client": "AD Equipment & Technologies",
     "title": "productronica India Bengluru",
     "category": "Exhibition",
     "location": "",
@@ -160,7 +159,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-12/02.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-12/03.jpeg"
     ],
-    "alt": "Ad Equipments exhibition project by Design Touch"
+    "alt": "AD Equipment & Technologies exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-13",
@@ -200,10 +199,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-15/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-15/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-15/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-15/04.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-15/05.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-15/06.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-15/03.jpeg"
     ],
     "alt": "Unisert exhibition project by Design Touch"
   },
@@ -217,9 +213,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-16/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-16/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-16/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-16/04.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-16/05.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-16/03.jpeg"
     ],
     "alt": "Acer exhibition project by Design Touch"
   },
@@ -280,7 +274,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-21",
-    "client": "Kale grp",
+    "client": "Kale Group",
     "title": "Advantage maharashtra expo Samnhaji nagar",
     "category": "Exhibition",
     "location": "",
@@ -288,10 +282,9 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-21/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-21/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-21/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-21/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-21/03.jpeg"
     ],
-    "alt": "Kale grp exhibition project by Design Touch"
+    "alt": "Kale Group exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-22",
@@ -303,14 +296,13 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-22/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-22/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-22/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-22/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-22/03.jpeg"
     ],
     "alt": "Visimaster exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-23",
-    "client": "Envysis",
+    "client": "Envisys",
     "title": "Siat Pune",
     "category": "Exhibition",
     "location": "",
@@ -319,7 +311,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-23/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-23/02.jpeg"
     ],
-    "alt": "Envysis exhibition project by Design Touch"
+    "alt": "Envisys exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-24",
@@ -331,8 +323,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-24/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-24/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-24/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-24/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-24/03.jpeg"
     ],
     "alt": "Josts exhibition project by Design Touch"
   },
@@ -360,15 +351,14 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-26/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-26/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-26/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-26/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-26/03.jpeg"
     ],
     "alt": "Kanan exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-27",
-    "client": "IEEMA Goregaon 25 to 27 FEB 2026",
-    "title": "Exhibition project",
+    "client": "Galaxy",
+    "title": "IEEMA Goregaon 25–27 Feb 2026",
     "category": "Exhibition",
     "location": "",
     "image": "/assets/images/projects/portfolio/exhibitions/project-27/01.jpeg",
@@ -376,7 +366,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-27/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-27/02.jpeg"
     ],
-    "alt": "IEEMA Goregaon 25 to 27 FEB 2026 exhibition project by Design Touch"
+    "alt": "Galaxy exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-28",
@@ -435,7 +425,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-32",
-    "client": "Kale group",
+    "client": "Kale Group",
     "title": "Acrex Mumbai",
     "category": "Exhibition",
     "location": "",
@@ -443,10 +433,9 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-32/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-32/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-32/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-32/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-32/03.jpeg"
     ],
-    "alt": "Kale group exhibition project by Design Touch"
+    "alt": "Kale Group exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-33",
@@ -464,7 +453,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-34",
-    "client": "Parekh enterprises",
+    "client": "Parekh Enterprises",
     "title": "SIECC, Surat",
     "category": "Exhibition",
     "location": "",
@@ -473,11 +462,11 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-34/01.png",
       "/assets/images/projects/portfolio/exhibitions/project-34/02.png"
     ],
-    "alt": "Parekh enterprises exhibition project by Design Touch"
+    "alt": "Parekh Enterprises exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-35",
-    "client": "Rosari",
+    "client": "Pet Care by Rossari",
     "title": "Pet fed Mumbai",
     "category": "Exhibition",
     "location": "",
@@ -485,10 +474,9 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-35/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-35/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-35/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-35/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-35/03.jpeg"
     ],
-    "alt": "Rosari exhibition project by Design Touch"
+    "alt": "Pet Care by Rossari exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-36",
@@ -500,8 +488,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-36/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-36/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-36/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-36/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-36/03.jpeg"
     ],
     "alt": "Mehrotra Biotech exhibition project by Design Touch"
   },
@@ -521,23 +508,20 @@ const projects = [
   },
   {
     "slug": "exhibition-project-38",
-    "client": "Leaptech",
-    "title": "Productonica Delhi",
+    "client": "Yamaha",
+    "title": "Productronica India, Bengaluru",
     "category": "Exhibition",
     "location": "",
     "image": "/assets/images/projects/portfolio/exhibitions/project-38/01.jpeg",
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-38/01.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-38/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-38/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-38/04.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-38/05.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-38/02.jpeg"
     ],
-    "alt": "Leaptech exhibition project by Design Touch"
+    "alt": "Yamaha exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-39",
-    "client": "Sondglitz",
+    "client": "Soundglitz",
     "title": "Prowave Expo Chennai",
     "category": "Exhibition",
     "location": "",
@@ -546,7 +530,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-39/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-39/02.jpeg"
     ],
-    "alt": "Sondglitz exhibition project by Design Touch"
+    "alt": "Soundglitz exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-40",
@@ -605,7 +589,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-44",
-    "client": "Exhibition Project 44",
+    "client": "Galaxy",
     "title": "Exhibition project",
     "category": "Exhibition",
     "location": "",
@@ -614,11 +598,11 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-44/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-44/02.jpeg"
     ],
-    "alt": "Exhibition Project 44 exhibition project by Design Touch"
+    "alt": "Galaxy exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-45",
-    "client": "Inventry",
+    "client": "The Inventory",
     "title": "Palm Expo Mumbai",
     "category": "Exhibition",
     "location": "",
@@ -628,7 +612,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-45/02.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-45/03.jpeg"
     ],
-    "alt": "Inventry exhibition project by Design Touch"
+    "alt": "The Inventory exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-46",
@@ -646,7 +630,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-47",
-    "client": "Mehrote Biotech",
+    "client": "Mehrotra Biotech",
     "title": "Asia labex Mumbai",
     "category": "Exhibition",
     "location": "",
@@ -654,10 +638,9 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-47/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-47/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-47/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-47/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-47/03.jpeg"
     ],
-    "alt": "Mehrote Biotech exhibition project by Design Touch"
+    "alt": "Mehrotra Biotech exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-48",
@@ -669,8 +652,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-48/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-48/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-48/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-48/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-48/03.jpeg"
     ],
     "alt": "Sheba exhibition project by Design Touch"
   },
@@ -690,7 +672,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-50",
-    "client": "Exhibition Project 50",
+    "client": "Leica",
     "title": "Exhibition project",
     "category": "Exhibition",
     "location": "",
@@ -700,7 +682,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-50/02.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-50/03.jpeg"
     ],
-    "alt": "Exhibition Project 50 exhibition project by Design Touch"
+    "alt": "Leica exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-51",
@@ -712,8 +694,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/exhibitions/project-51/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-51/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-51/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-51/04.jpeg"
+      "/assets/images/projects/portfolio/exhibitions/project-51/03.jpeg"
     ],
     "alt": "Advantech exhibition project by Design Touch"
   },
@@ -746,7 +727,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-54",
-    "client": "Hmpl",
+    "client": "HMPL",
     "title": "Anuga Mumbai",
     "category": "Exhibition",
     "location": "",
@@ -755,20 +736,16 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-54/01.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-54/02.jpeg"
     ],
-    "alt": "Hmpl exhibition project by Design Touch"
+    "alt": "HMPL exhibition project by Design Touch"
   },
   {
     "slug": "exhibition-project-55",
     "client": "Leaptech",
-    "title": "Productonica  Banglore",
+    "title": "Productronica India, Bengaluru",
     "category": "Exhibition",
     "location": "",
-    "image": "/assets/images/projects/portfolio/exhibitions/project-55/01.jpeg",
+    "image": "/assets/images/projects/portfolio/exhibitions/project-55/05.jpeg",
     "images": [
-      "/assets/images/projects/portfolio/exhibitions/project-55/01.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-55/02.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-55/03.jpeg",
-      "/assets/images/projects/portfolio/exhibitions/project-55/04.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-55/05.jpeg"
     ],
     "alt": "Leaptech exhibition project by Design Touch"
@@ -817,7 +794,7 @@ const projects = [
   },
   {
     "slug": "exhibition-project-59",
-    "client": "Vidojet",
+    "client": "Videojet",
     "title": "Anuga Mumbai",
     "category": "Exhibition",
     "location": "",
@@ -827,7 +804,7 @@ const projects = [
       "/assets/images/projects/portfolio/exhibitions/project-59/02.jpeg",
       "/assets/images/projects/portfolio/exhibitions/project-59/03.jpeg"
     ],
-    "alt": "Vidojet exhibition project by Design Touch"
+    "alt": "Videojet exhibition project by Design Touch"
   },
   {
     "slug": "interior-project-01",
@@ -839,22 +816,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/interiors/project-01/01.jpeg",
       "/assets/images/projects/portfolio/interiors/project-01/02.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/03.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/04.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/05.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/06.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/07.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/08.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/09.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/10.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/11.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/12.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/13.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/14.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/15.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/16.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/17.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-01/18.jpeg"
+      "/assets/images/projects/portfolio/interiors/project-01/03.jpeg"
     ],
     "alt": "Design Touch interior design project 01"
   },
@@ -868,15 +830,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/interiors/project-02/01.jpeg",
       "/assets/images/projects/portfolio/interiors/project-02/02.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/03.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/04.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/05.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/06.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/07.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/08.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/09.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/10.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-02/11.jpeg"
+      "/assets/images/projects/portfolio/interiors/project-02/03.jpeg"
     ],
     "alt": "Design Touch interior design project 02"
   },
@@ -890,12 +844,7 @@ const projects = [
     "images": [
       "/assets/images/projects/portfolio/interiors/project-03/01.jpeg",
       "/assets/images/projects/portfolio/interiors/project-03/02.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-03/03.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-03/04.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-03/05.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-03/06.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-03/07.jpeg",
-      "/assets/images/projects/portfolio/interiors/project-03/08.jpeg"
+      "/assets/images/projects/portfolio/interiors/project-03/03.jpeg"
     ],
     "alt": "Design Touch interior design project 03"
   }

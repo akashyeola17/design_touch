@@ -170,7 +170,7 @@ function renderClients() {
   target.innerHTML = clients
     .map(
       (client) => `<div class="client-logo reveal">
-      <img src="${client.logo}" alt="${client.name} logo" loading="lazy" decoding="async" />
+      <img src="${client.logo}" alt="${client.name} — Design Touch client" loading="lazy" decoding="async" />
     </div>`,
     )
     .join("");
@@ -223,8 +223,9 @@ function renderTestimonials() {
 
 function initHeroCarousel() {
   const slidesWrap = document.querySelector("[data-hero-slides]");
+  const heroSection = document.querySelector("[data-hero-section]");
   const slides = heroMedia.slides || [];
-  if (!slidesWrap || !slides.length) return;
+  if (!slidesWrap || !heroSection || !slides.length) return;
 
   slidesWrap.innerHTML = slides
     .map(
@@ -244,6 +245,7 @@ function initHeroCarousel() {
   const setSlide = (next) => {
     index = (next + slides.length) % slides.length;
     slideEls.forEach((el, i) => el.classList.toggle("is-active", i === index));
+    heroSection.dataset.heroTheme = slides[index].theme || "default";
   };
 
   const tick = (now, start) => {
@@ -273,6 +275,17 @@ function initHeroCarousel() {
 
   setSlide(0);
   startAutoplay();
+}
+
+function hideWhatsAppOverHomeHero() {
+  const hero = document.querySelector("[data-hero-section]");
+  if (!hero || !("IntersectionObserver" in window)) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => document.body.classList.toggle("home-hero-visible", entry.isIntersecting),
+    { threshold: 0.01 },
+  );
+  observer.observe(hero);
 }
 
 function animateStats() {
@@ -334,6 +347,7 @@ renderServicesGrid();
 renderClients();
 renderTestimonials();
 initHeroCarousel();
+hideWhatsAppOverHomeHero();
 configureWhatsAppAction();
 initRevealAnimations();
 animateStats();

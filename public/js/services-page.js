@@ -18,9 +18,10 @@ if (list) {
       : `<p class="service-feature__pending">Approved service description from the company profile PDF needed.</p>`;
     const message = encodeURIComponent(`Hello Design Touch, I would like to discuss ${service.name}.`);
     const whatsappHref = `https://wa.me/${whatsappNumber}?text=${message}`;
+    const projectCategory = service.slug === "interiors" ? "interior" : "exhibition";
     return `<article class="service-feature reveal" id="${service.slug}">
       <div class="service-feature__media">${image}</div>
-      <div class="service-feature__copy"><p class="eyebrow">SERVICE ${String(index + 1).padStart(2, "0")}</p><h2><span>${String(index + 1).padStart(2, "0")}</span>${service.name}</h2>${copy}<a class="text-link" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">Discuss this service <span aria-hidden="true">↗</span></a><p class="service-feature__related"><a class="text-link" href="/projects">View related projects</a></p></div>
+      <div class="service-feature__copy"><p class="eyebrow">SERVICE ${String(index + 1).padStart(2, "0")}</p><h2><span>${String(index + 1).padStart(2, "0")}</span>${service.name}</h2>${copy}<div class="service-feature__actions"><a class="service-feature__button service-feature__button--contact" href="${whatsappHref}" target="_blank" rel="noopener noreferrer">Discuss this service <span aria-hidden="true">↗</span></a><a class="service-feature__button service-feature__button--projects" href="/projects?category=${projectCategory}#portfolio">View related projects <span aria-hidden="true">↗</span></a></div></div>
     </article>`;
   }).join("");
 }

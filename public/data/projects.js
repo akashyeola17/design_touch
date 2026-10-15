@@ -46,7 +46,7 @@ const projects = [
     alt: "Bucher Automation exhibition stall at Glasspex Mumbai by Design Touch",
   },
   {
-    slug: "envysis-siat-pune",
+    slug: "envisys-siat-pune",
     client: "Envisys",
     title: "SIAT Pune",
     category: "Exhibition",
