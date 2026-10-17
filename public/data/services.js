@@ -24,7 +24,7 @@ const services = [
     ],
     aboutTitle: "Interior Design & Execution",
     includeAbout: true,
-    image: "/assets/images/services/office_branding.png",
+    image: "/assets/images/services/interior-design.jpg",
     imageAlt: "Branded interior space planned and executed by Design Touch",
   },
   {
@@ -38,7 +38,7 @@ const services = [
     ],
     aboutTitle: "Event & Experience Design",
     includeAbout: true,
-    image: "/assets/images/services/stage_event_setup.png",
+    image: "/assets/images/services/event-design-setup.png",
     imageAlt: "Event stage and branding setup by Design Touch",
   },
   {
@@ -52,7 +52,7 @@ const services = [
     ],
     aboutTitle: "Branding & Visual Displays",
     includeAbout: true,
-    image: "/assets/images/services/printing_signage.png",
+    image: "/assets/images/services/printing-signage.png",
     imageAlt: "Exhibition graphics and display branding by Design Touch",
   },
 ];

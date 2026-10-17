@@ -101,7 +101,7 @@
 .lightbox__close { top: .8rem; right: .8rem; font-size: 1.6rem !important; }
 .lightbox__previous { top: 50%; left: .7rem; transform: translateY(-50%); }
 .lightbox__next { top: 50%; right: .7rem; transform: translateY(-50%); }
-.project-lightbox { position: relative; width: fit-content; max-width: 96vw; max-height: 96dvh; padding: 0; overflow: visible; border: 0; color: #fff; background: transparent; }
+.project-lightbox { position: fixed; inset: 0; width: fit-content; max-width: 96vw; max-height: 96dvh; margin: auto; padding: 0; overflow: visible; border: 0; color: #fff; background: transparent; }
 .project-lightbox::backdrop { background: rgb(24 26 24 / 82%); }
 .project-lightbox figure { position: relative; display: grid; width: fit-content; max-width: 96vw; max-height: 96dvh; place-items: center; margin: 0; }
 .project-lightbox img { display: block; width: auto; height: auto; max-width: 96vw; max-height: 96dvh; object-fit: contain; }
