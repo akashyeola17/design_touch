@@ -59,7 +59,7 @@ function openGallery(card) {
   if (!activeImages.length) return;
   updateGalleryImage();
   gallery.showModal();
-  gallery.querySelector("[data-gallery-close]")?.focus();
+  gallery.querySelector("[data-gallery-close]")?.focus({ preventScroll: true });
 }
 
 function stepGallery(direction) {

@@ -6,12 +6,11 @@ const teamMembers = [
   { image: "2 Sr. Sales Executive.jpeg", name: "Kruttika Jangam", role: "Sr. Sales Executive" },
   { image: "3 Production Manager.png", name: "Kapil Kajaniya", role: "Execution Head" },
   { image: "4 Jr. Sales Executive.png", name: "Chandralata Sharma", role: "Jr. Sales Executive" },
-  { image: "5 Jr.Sales Executive.jpeg", name: "Jyoti Gupta", role: "Jr. Sales Executive" },
+  { image: "5 Jr.Sales Executive.jpeg", name: "Jyoti Tripathi", role: "Jr. Sales Executive" },
   { image: "6 Administration.png", name: "Aarohi Bandkar", role: "Administration" },
   { image: "7. Graphic Designer.png", name: "Shital Ramane", role: "Graphic Designer" },
   { image: "8 Sr.3D Visualizerr.jpeg", name: "Gauri Shelar", role: "Sr. 3D Visualizer" },
   { image: "9 Jr.3D Visualizer.png", name: "Yash Bhovad", role: "Jr. 3D Visualizer" },
-  { image: "10 .Digital Marketing Executive.jpeg", name: "Sanjana Gupta", role: "Digital Marketing Executive" },
   { image: "11 .Office Assistant.png", name: "Abhishek Thukrul", role: "Office Assistant" },
 ];
 

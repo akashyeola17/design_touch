@@ -10,8 +10,8 @@ const services = [
     ],
     aboutTitle: "Exhibition Stall Design & Fabrication",
     includeAbout: true,
-    image: "/assets/images/services/exhibition_stall.png",
-    imageAlt: "Custom exhibition stall designed and fabricated by Design Touch",
+    image: "/assets/images/services/exhibition-expo.jpeg",
+    imageAlt: "Busy trade show floor with exhibition stalls and visitors",
   },
   {
     name: "Interior Design & Execution",
@@ -24,7 +24,7 @@ const services = [
     ],
     aboutTitle: "Interior Design & Execution",
     includeAbout: true,
-    image: "/assets/images/services/office_branding.png",
+    image: "/assets/images/services/interior-design.jpg",
     imageAlt: "Branded interior space planned and executed by Design Touch",
   },
   {
@@ -38,11 +38,11 @@ const services = [
     ],
     aboutTitle: "Event & Experience Design",
     includeAbout: true,
-    image: "/assets/images/services/stage_event_setup.png",
+    image: "/assets/images/services/event-design-setup.png",
     imageAlt: "Event stage and branding setup by Design Touch",
   },
   {
-    name: "Branding & Display Solutions",
+    name: "Branding & Printing Solutions",
     slug: "branding-displays",
     pageDescription:
       "We create impactful branding solutions including signage, graphics, backdrops, displays, and visual elements that strengthen your brand presence.",
@@ -52,7 +52,7 @@ const services = [
     ],
     aboutTitle: "Branding & Visual Displays",
     includeAbout: true,
-    image: "/assets/images/services/printing_signage.png",
+    image: "/assets/images/services/printing-signage.png",
     imageAlt: "Exhibition graphics and display branding by Design Touch",
   },
 ];
