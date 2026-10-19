@@ -10,8 +10,8 @@ const services = [
     ],
     aboutTitle: "Exhibition Stall Design & Fabrication",
     includeAbout: true,
-    image: "/assets/images/services/exhibition_stall.png",
-    imageAlt: "Custom exhibition stall designed and fabricated by Design Touch",
+    image: "/assets/images/services/exhibition-expo.jpeg",
+    imageAlt: "Busy trade show floor with exhibition stalls and visitors",
   },
   {
     name: "Interior Design & Execution",
