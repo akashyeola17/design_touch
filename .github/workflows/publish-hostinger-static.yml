@@ -1,0 +1,37 @@
+name: Publish Hostinger static branch
+
+on:
+  push:
+    branches:
+      - jayesh
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-static-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source branch
+        uses: actions/checkout@v4
+
+      - name: Build static website
+        run: npm run build:static
+
+      - name: Publish files to Hostinger deployment branch
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/hostinger-static"
+          cp -a hostinger-static/. "$RUNNER_TEMP/hostinger-static/"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git branch -D hostinger-deploy 2>/dev/null || true
+          git switch --orphan hostinger-deploy
+          git clean -fdx
+
+          cp -a "$RUNNER_TEMP/hostinger-static/." .
+          git add -A
+          git commit -m "Publish static site from ${GITHUB_SHA::7}"
+          git push --force origin hostinger-deploy
