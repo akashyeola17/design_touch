@@ -42,7 +42,7 @@ const services = [
     imageAlt: "Event stage and branding setup by Design Touch",
   },
   {
-    name: "Branding & Display Solutions",
+    name: "Branding & Printing Solutions",
     slug: "branding-displays",
     pageDescription:
       "We create impactful branding solutions including signage, graphics, backdrops, displays, and visual elements that strengthen your brand presence.",
