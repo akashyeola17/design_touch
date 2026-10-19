@@ -1,0 +1,8 @@
+DirectoryIndex index.html
+ErrorDocument 404 /not-found.html
+RewriteEngine On
+RewriteRule ^(about|services|projects)/$ /$1 [R=301,L]
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^services/?$ services.html [L]
+RewriteRule ^projects/?$ projects.html [L]
+RewriteRule ^(index|home|homePage)\.html$ / [R=301,L]
